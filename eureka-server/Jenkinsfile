@@ -36,6 +36,7 @@ pipeline {
         stage('Gradle Build') {
             steps {
                 dir('eureka-server') {
+                    sh 'sudo chmod +x gradlew'
                     sh './gradlew clean build '
                 }
             }
