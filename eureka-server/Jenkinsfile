@@ -37,7 +37,7 @@ pipeline {
             steps {
                 dir('eureka-server') {
                     sh 'chmod +x gradlew'
-                    sh './gradlew clean build '
+                    sh './gradlew clean build --offline '
                 }
             }
         }
